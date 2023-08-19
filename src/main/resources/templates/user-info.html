@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AddAndUpdate</title>
+</head>
+<body>
+<form th:name="form2" th:method="POST" th:action="@{/save}" th:object="${addUs}">
+    <div>
+        <input type="hidden" th:field="*{id}" id="id">
+        <input type="hidden" name="_method" value="POST">
+        <label for="name">Name</label>
+        <input type="text" th:field="*{name}" id="name">
+        <br>
+        <label for="lastName">LastName</label>
+        <input type="text" th:field="*{lastName}" id="lastName">
+        <br>
+        <label for="age">Age</label>
+        <input type="text" th:field="*{age}" id="age">
+        <br>
+        <input type="submit" value="OK!">
+    </div>
+</form>
+</body>
+</html>
